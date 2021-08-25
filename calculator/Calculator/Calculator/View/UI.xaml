@@ -9,7 +9,20 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
-            
+            <ScrollView Padding="10" Grid.Row="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout VerticalOptions="End" HorizontalOptions="End" Grid.Row="0"/>
+                    <StackLayout VerticalOptions="End" HorizontalOptions="End" Grid.Row="1">
+                        <Label Text="0" FontSize="50" FontAttributes="Bold" TextColor="Black"/>
+                        <!--<Label FontSize="30" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="End"/>-->
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
             
             <Grid x:Name="GridNumbers" Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -25,29 +38,29 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="AC" Grid.Column="0" Grid.Row="0"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="⌫" Grid.Column="1" Grid.Row="0"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="%" Grid.Column="2" Grid.Row="0"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="÷" Grid.Column="3" Grid.Row="0"/>
+                <Button BackgroundColor="#EEE21F" FontSize="25" HeightRequest="60" BorderRadius="30" Text="AC" Grid.Column="0" Grid.Row="0"/>
+                <Button BackgroundColor="#FA0B0B" FontSize="25" HeightRequest="60" BorderRadius="30" Text="⌫" Grid.Column="1" Grid.Row="0"/>
+                <Button BackgroundColor="#F7950A" FontSize="25" HeightRequest="60" BorderRadius="30" Text="%" Grid.Column="2" Grid.Row="0" />
+                <Button BackgroundColor="#A35F17" FontSize="25" HeightRequest="60" BorderRadius="30" Text="÷" Grid.Column="3" Grid.Row="0"/>
 
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="7" Grid.Column="0" Grid.Row="1"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="8" Grid.Column="1" Grid.Row="1"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="9" Grid.Column="2" Grid.Row="1"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="×" Grid.Column="3" Grid.Row="1"/>
+                <Button FontSize="25" HeightRequest="60" BorderRadius="30" Text="7" Grid.Column="0" Grid.Row="1"/>
+                <Button FontSize="25" HeightRequest="60" BorderRadius="30" Text="8" Grid.Column="1" Grid.Row="1"/>
+                <Button FontSize="25" HeightRequest="60" BorderRadius="30" Text="9" Grid.Column="2" Grid.Row="1"/>
+                <Button BackgroundColor="#A35F17" FontSize="25" HeightRequest="60" BorderRadius="30" Text="×" Grid.Column="3" Grid.Row="1"/>
 
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="4" Grid.Column="0" Grid.Row="2"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="5" Grid.Column="1" Grid.Row="2"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="6" Grid.Column="2" Grid.Row="2"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="-" Grid.Column="3" Grid.Row="2"/>
+                <Button FontSize="25" HeightRequest="60" BorderRadius="30" Text="4" Grid.Column="0" Grid.Row="2"/>
+                <Button FontSize="25" HeightRequest="60" BorderRadius="30" Text="5" Grid.Column="1" Grid.Row="2"/>
+                <Button FontSize="25" HeightRequest="60" BorderRadius="30" Text="6" Grid.Column="2" Grid.Row="2"/>
+                <Button BackgroundColor="#A35F17" FontSize="25" HeightRequest="60" BorderRadius="30" Text="-" Grid.Column="3" Grid.Row="2"/>
 
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="1" Grid.Column="0" Grid.Row="3"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="2" Grid.Column="1" Grid.Row="3"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="3" Grid.Column="2" Grid.Row="3"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="+" Grid.Column="3" Grid.Row="3"/>
+                <Button FontSize="25" HeightRequest="60" BorderRadius="30" Text="1" Grid.Column="0" Grid.Row="3"/>
+                <Button FontSize="25" HeightRequest="60" BorderRadius="30" Text="2" Grid.Column="1" Grid.Row="3"/>
+                <Button FontSize="25" HeightRequest="60" BorderRadius="30" Text="3" Grid.Column="2" Grid.Row="3"/>
+                <Button BackgroundColor="#A35F17" FontSize="25" HeightRequest="60" BorderRadius="30" Text="+" Grid.Column="3" Grid.Row="3"/>
 
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="0" Grid.Column="1" Grid.Row="4"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="." Grid.Column="2" Grid.Row="4"/>
-                <Button FontSize="25" FontFamily="Verdana" HeightRequest="60" BorderRadius="30" Text="=" FontAttributes="Bold" BackgroundColor="#A35F17" Grid.Column="3" Grid.Row="4"/>
+                <Button FontSize="25" HeightRequest="60" BorderRadius="30" Text="0" Grid.Column="1" Grid.Row="4"/>
+                <Button FontSize="25" HeightRequest="60" BorderRadius="30" Text="." Grid.Column="2" Grid.Row="4"/>
+                <Button BackgroundColor="#A35F17" FontSize="40" HeightRequest="60" BorderRadius="30" Text="=" FontAttributes="Bold" Grid.Column="3" Grid.Row="4"/>
             </Grid>
 
         </Grid>
