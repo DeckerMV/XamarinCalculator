@@ -22,8 +22,11 @@ namespace Calculator
                 }
                 else
                 {
-                    //TO-DO:
-                    //Figure out a way to get the percentaje of the current expression value.
+                    string[] expressionAndPercentaje = value.Split('%');
+                    decimal percentaje = decimal.Parse(expressionAndPercentaje[1]);
+                    decimal percentajeResult = Calculations.CalculateInput(expressionAndPercentaje[0]) * (percentaje / 100);
+                    currentValue = expressionAndPercentaje[0] + percentajeResult.ToString();
+                    OnPropertyChanged(nameof(CurrentValue));
                 }
                 OnPropertyChanged(nameof(Result));
             }
