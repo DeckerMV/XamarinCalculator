@@ -64,6 +64,7 @@
             <Button Clicked="NumbersTapped" Text="3" Grid.Column="2" Grid.Row="3" BackgroundColor="LightSteelBlue"/>
             <Button Clicked="OperationsTapped" Text="+" Grid.Column="3" Grid.Row="3" BackgroundColor="SaddleBrown"/>
 
+            <Button Clicked="ClipboardTapped" Grid.Column="0" Grid.Row="4" BackgroundColor="Wheat"/>
             <Button Clicked="NumbersTapped" Text="0" Grid.Column="1" Grid.Row="4" BackgroundColor="LightSteelBlue"/>
             <Button Clicked="NumbersTapped" Text="." Grid.Column="2" Grid.Row="4" BackgroundColor="LightSteelBlue"/>
             <Button Clicked="EqualTapped" Text="=" FontAttributes="Bold" Grid.Column="3" Grid.Row="4" BackgroundColor="SaddleBrown"/>

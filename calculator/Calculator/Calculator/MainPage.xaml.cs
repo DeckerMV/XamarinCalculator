@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace Calculator
 {
@@ -157,6 +158,11 @@ namespace Calculator
                 HasEqualBeenPressed = false;          
             }
 
+        }
+
+        private async void ClipboardTapped(object sender, EventArgs e)
+        {
+            await Clipboard.SetTextAsync(LblResult.Text.Remove(0, 2));
         }
     }
 }
