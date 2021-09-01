@@ -10,6 +10,7 @@ namespace Calculator
 {
     public partial class MainPage : ContentPage
     {
+        private bool HasDot;
         public MainPage()
         {
             InitializeComponent();
@@ -40,6 +41,7 @@ namespace Calculator
                     LblCurrentValue.Text = "0";
                     BtnClear.Text = "AC";
                     LblResult.IsVisible = false;
+                    HasDot = false;
                     break;
                 case "⌫":
                     if (LblCurrentValue.Text.Length > 1)
@@ -51,7 +53,11 @@ namespace Calculator
                         LblCurrentValue.Text = "0";
                         BtnClear.Text = "AC";
                         LblResult.IsVisible = false;
+                        HasDot = false;
                     }
+                    break;
+                case "%":
+                    LblCurrentValue.Text += "%";
                     break;
             }
         }
@@ -63,6 +69,7 @@ namespace Calculator
                     || LblCurrentValue.Text.EndsWith("×") || LblCurrentValue.Text.EndsWith("÷")))
             {
                 LblCurrentValue.Text += opTapped.Text;
+                HasDot = false;
             }
         }
 
@@ -75,9 +82,21 @@ namespace Calculator
                 LblResult.IsVisible = true;
             }
 
+            if ((LblCurrentValue.Text.EndsWith("+") || LblCurrentValue.Text.EndsWith("-")
+                    || LblCurrentValue.Text.EndsWith("×") || LblCurrentValue.Text.EndsWith("÷")) && btnPressed.Text == ".")
+            {
+                LblCurrentValue.Text += "0.";
+                HasDot = true;
+            }
+
             if (LblCurrentValue.Text != "0")
             {
-                if (!(LblCurrentValue.Text.Contains(".") && btnPressed.Text == "."))
+                if (btnPressed.Text == "." && !HasDot)
+                {
+                    LblCurrentValue.Text += btnPressed.Text;
+                    HasDot = true;
+                }
+                else if (btnPressed.Text != ".")
                 {
                     LblCurrentValue.Text += btnPressed.Text;
                 }
@@ -91,6 +110,7 @@ namespace Calculator
                 else if (btnPressed.Text == ".")
                 {
                     LblCurrentValue.Text += btnPressed.Text;
+                    HasDot = true;
                 }
             }
 

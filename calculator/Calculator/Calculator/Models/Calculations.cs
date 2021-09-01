@@ -19,6 +19,10 @@ namespace Calculator.Models
             {
                 input = input.Remove(input.Length - 1);
             }
+            else if ((input.EndsWith("0") || input.EndsWith("0.")) && input.Contains("÷") && (input.IndexOf('÷') == input.Length - 2 || input.IndexOf('÷') == input.Length - 3))
+            {
+                input = input.Remove(input.LastIndexOf("÷"));
+            }
 
             string strNumber = "";
             foreach (char theChar in input)

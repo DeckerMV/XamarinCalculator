@@ -16,7 +16,15 @@ namespace Calculator
             get => currentValue;
             set
             {
-                currentValue = value;
+                if (!value.Contains("%"))
+                {
+                    currentValue = value;
+                }
+                else
+                {
+                    //TO-DO:
+                    //Figure out a way to get the percentaje of the current expression value.
+                }
                 OnPropertyChanged(nameof(Result));
             }
         }
