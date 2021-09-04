@@ -12,15 +12,14 @@ namespace Calculator.Models
             List<string> splittedInput = new List<string>();
             //stack for storing operators based on the RPN algorithm
             Stack<string> operatorStack = new Stack<string>();
-            //the same splittedInput but formatted as PostFix, so: [10, +, 5] becomes ["10", "5", "+"]
+            //the same splittedInput but formatted as PostFix, so: ["10", "+", "5"] becomes ["10", "5", "+"]
             List<string> splittedPostFixExp = new List<string>();
 
             if (input.EndsWith("+") || input.EndsWith("-") || input.EndsWith("×") || input.EndsWith("÷"))
             {
                 input = input.Remove(input.Length - 1);
             }
-            else if ((input.EndsWith("0") || input.EndsWith("0.")) && 
-                input.Contains("÷") && (input.IndexOf('÷') == input.Length - 2 || input.IndexOf('÷') == input.Length - 3))
+            else if (input.LastIndexOf("÷0") != -1)
             {
                 input = input.Remove(input.LastIndexOf("÷"));
             }
