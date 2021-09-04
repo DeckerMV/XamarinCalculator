@@ -13,7 +13,7 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <ScrollView Padding="10" Grid.Row="0">
+        <ScrollView x:Name="SViewer" Padding="10" Grid.Row="0">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>

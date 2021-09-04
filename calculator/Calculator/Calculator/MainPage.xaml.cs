@@ -13,6 +13,12 @@ namespace Calculator
         {
             InitializeComponent();
             InitButtonsStyle();
+            SViewer.LayoutChanged += SViewer_SizeChanged;
+        }
+
+        private async void SViewer_SizeChanged(object sender, EventArgs e)
+        {
+            await SViewer.ScrollToAsync(0, SViewer.Width + LblCurrentValue.Width + LblResult.Width, false);
         }
 
         private void InitButtonsStyle()
